@@ -113,7 +113,7 @@ function AddNotes() {
 
 	return (
 		<>
-			<div className='flex flex-1 flex-col bg-white rounded-lg h-[290px] m-auto my-2 shadow-lg'>
+			<div className='flex flex-1 flex-col bg-white rounded-lg h-[280px] m-auto my-2 shadow-lg'>
 				<div className='text-blue-950 opacity-80 text-3xl pt-5 ps-6 font-semibold'>
 					Add a Note
 				</div>
