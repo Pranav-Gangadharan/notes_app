@@ -114,7 +114,7 @@ function AddNotes() {
 	return (
 		<>
 			<div className='flex flex-1 flex-col bg-white rounded-lg h-[290px] m-auto my-2 shadow-lg'>
-				<div className='text-blue-950 opacity-80 text-3xl pt-10 ps-6 font-semibold'>
+				<div className='text-blue-950 opacity-80 text-3xl pt-5 ps-6 font-semibold'>
 					Add a Note
 				</div>
 
@@ -146,7 +146,7 @@ function AddNotes() {
 						<form onSubmit={handleSubmit}>
 							<div>
 								<input
-									className='w-1/2 py-5 px-6 text-blue-950 outline-none border-0 text-2xl placeholder:text-blue-950 font-semibold opacity-75'
+									className='w-1/2 pt-5 px-6 text-blue-950 outline-none border-0 text-2xl placeholder:text-blue-950 font-semibold opacity-75'
 									type='text'
 									name='title'
 									placeholder='Title'
@@ -161,7 +161,7 @@ function AddNotes() {
 							<div className='flex flex-col'>
 								<div className='mb-3'>
 									<textarea
-										className='w-full h-1/3 resize-none outline-none border-0 py-2 px-6 scrollbar-thin'
+										className='w-full h-1/3 resize-none outline-none border-0 pt-2 px-6 scrollbar-thin'
 										type='text'
 										name='content'
 										placeholder='Take a note...'
