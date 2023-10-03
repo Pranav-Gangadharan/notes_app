@@ -79,7 +79,7 @@ function Sidebar() {
 		<div>
 			<div
 				onClick={() => setIsOpen(false)}
-				className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${
+				className={`md:hidden fixed inset-0 max-h-full z-[998] bg-black/50 ${
 					isOpen ? 'block' : 'hidden'
 				}`}
 			></div>
@@ -87,7 +87,7 @@ function Sidebar() {
 			<motion.div
 				variants={sidebar_animation}
 				animate={isOpen ? 'open' : 'close'}
-				className='bg-white text-gray shadow-xl z-[999] w-[16rem] max-w-[16rem] h-screen overflow-hidden md:relative fixed'
+				className='bg-white text-gray shadow-xl z-[999] w-[16rem] max-w-[16rem] h-full overflow-hidden md:relative fixed'
 			>
 				<div
 					onClick={() => setIsOpen(!isOpen)}
@@ -101,7 +101,7 @@ function Sidebar() {
 				>
 					Notes App
 				</motion.div>
-				<div className='flex flex-col h-full'>
+				<div className='flex flex-col h-screen'>
 					<ul className='h-full'>
 						<li className='link active '>
 							<DescriptionOutlinedIcon />
