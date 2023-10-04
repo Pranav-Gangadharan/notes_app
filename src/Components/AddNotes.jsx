@@ -205,27 +205,27 @@ function AddNotes() {
 				<div className='flex gap-5 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-slate-200 py-2'>
 					{data.map((e, i) => (
 						<div
-							className='min-w-[14rem] h-64 bg-white rounded-xl shadow-lg cursor-pointer '
+							className='min-w-[14rem] w-[14rem] h-64 bg-white rounded-xl shadow-lg cursor-pointer '
 							key={i}
 						>
 							<div className='flex items-center justify-between mb-3'>
-								<div className='mt-3 ms-3 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-50'>
+								<div className='w-[9rem] mt-3 ms-3 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-50'>
 									<h1 className='font-semibold opacity-85'>{e.title}</h1>
 								</div>
 
 								<div className='mt-3 opacity-85'>
 									<EditOutlinedIcon
-										className='me-2 cursor-pointer'
+										className='ms-1 cursor-pointer'
 										onClick={() => getEditUser(e.id)}
 									/>
 									<DeleteOutlineIcon
-										className='me-3 cursor-pointer'
+										className='me-2 cursor-pointer'
 										onClick={() => handleDelete(e.id, i)}
 									/>
 								</div>
 							</div>
-							<div className='h-3/4 break-words overflow-y-scroll scrollbar-thin scrollbar-thumb-slate-50'>
-								<p className='ms-3 me-3 text-black font-medium opacity-80 text-justify'>
+							<div className='h-[65%] overflow-auto scrollbar-thin scrollbar-thumb-slate-50'>
+								<p className='ms-3 me-3 text-black break-words font-medium opacity-80 text-justify'>
 									{e.content}
 								</p>
 							</div>
