@@ -94,8 +94,8 @@ function AddNotes() {
 			let res = await axios.put(`${API}/${id}`, values);
 
 			if (res.status === 200) {
-				toast.success('Updated');
 				getData();
+				toast.success('Updated');
 				setInitialValues({
 					id: null,
 					title: '',
@@ -113,7 +113,7 @@ function AddNotes() {
 
 	return (
 		<>
-			<div className='flex flex-1 flex-col bg-white rounded-lg h-[250px] m-auto mt-1 shadow-lg'>
+			<div className='flex flex-1 flex-col bg-white rounded-lg h-[290px] m-auto mt-1 shadow-lg'>
 				<div className='text-blue-950 opacity-80 text-3xl pt-5 ps-6 font-semibold'>
 					Add a Note
 				</div>
@@ -155,7 +155,9 @@ function AddNotes() {
 									onBlur={handleBlur}
 								/>
 								{errors.title && touched.title ? (
-									<div style={{ color: 'red' }}>{errors.title}</div>
+									<div style={{ color: 'red', paddingLeft: '20px' }}>
+										{errors.title}
+									</div>
 								) : null}
 							</div>
 							<div className='flex flex-col'>
@@ -170,7 +172,9 @@ function AddNotes() {
 										onBlur={handleBlur}
 									/>
 									{errors.content && touched.content ? (
-										<div style={{ color: 'red' }}>{errors.content}</div>
+										<div style={{ color: 'red', paddingLeft: '20px' }}>
+											{errors.content}
+										</div>
 									) : null}
 								</div>
 								<div className='flex justify-end me-3'>
@@ -198,11 +202,14 @@ function AddNotes() {
 				<div className='text-sm text-gray-600 font-semibold mb-2 opacity-80'>
 					<p>Recently viewed</p>
 				</div>
-				<div className='flex gap-5 flex-nowrap overflow-x-scroll scrollbar-thin '>
+				<div className='flex gap-5 flex-nowrap overflow-x-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-slate-200 py-2'>
 					{data.map((e, i) => (
-						<div className='w-60 h-64 bg-white rounded-xl shadow-lg ' key={i}>
+						<div
+							className='min-w-[14rem] h-64 bg-white rounded-xl shadow-lg cursor-pointer '
+							key={i}
+						>
 							<div className='flex items-center justify-between mb-3'>
-								<div className='mt-3 ms-3 overflow-y-scroll scrollbar-thin scrollbar-thumb-slate-50'>
+								<div className='mt-3 ms-3 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-50'>
 									<h1 className='font-semibold opacity-85'>{e.title}</h1>
 								</div>
 
